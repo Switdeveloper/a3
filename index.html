@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freedman Insurance Agency - Florida's Trusted Insurance Provider</title>
+    <title>FreedmanBrokerInsurance - Florida's Trusted Insurance Agency</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'dark-blue': '#062a4a',
-                        'primary-red': '#e63946',
-                        'secondary-blue': '#1d3557',
-                        'accent-gold': '#d4a373',
+                        'dark-blue': '#0d152e',
+                        'primary-red': '#c91414',
+                        'accent-orange': '#ff7a7a',
                     },
                     fontFamily: {
                         'serif': ['Playfair Display', 'serif'],
@@ -24,1271 +23,487 @@
         }
     </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; color: #333; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; color: #333; }
         h1, h2, h3, h4, h5, h6, .serif { font-family: 'Playfair Display', serif; }
-        .bg-dark-blue { background-color: #062a4a; }
-        .text-dark-blue { color: #062a4a; }
-        .bg-primary-red { background-color: #e63946; }
-        .text-primary-red { color: #e63946; }
-        .hover\:bg-red-800:hover { background-color: #c1121f; }
-        .hover\:text-primary-red:hover { color: #e63946; }
-        .agent-carousel { transition: transform 0.5s ease-in-out; }
-        
-        /* Awards Section Animation */
-        @keyframes fadeInUp {
-            0% { transform: translateY(30px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
-        }
-        .awards-animate .grid > div {
-            animation: fadeInUp 0.6s ease-out forwards;
-            opacity: 0;
-        }
-        .awards-animate .grid > div:nth-child(1) { animation-delay: 0.1s; }
-        .awards-animate .grid > div:nth-child(2) { animation-delay: 0.2s; }
-        .awards-animate .grid > div:nth-child(3) { animation-delay: 0.3s; }
-        .awards-animate .grid > div:nth-child(4) { animation-delay: 0.4s; }
-        .awards-animate .grid > div:nth-child(5) { animation-delay: 0.5s; }
-        .awards-animate .grid > div:nth-child(6) { animation-delay: 0.6s; }
-        .awards-animate .grid > div:nth-child(7) { animation-delay: 0.7s; }
-        
-        /* Hide scrollbar for carousel */
-        #reviewsCarousel::-webkit-scrollbar { display: none; }
-        #reviewsCarousel { -ms-overflow-style: none; scrollbar-width: none; }
-        
-        /* Infinite scroll animation */
-        #reviewsCarousel {
-            display: flex;
-            width: max-content;
-            animation: scrollLeft 20s linear infinite;
-        }
-        #reviewsCarousel:hover {
-            animation-play-state: paused;
-        }
-        @keyframes scrollLeft {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-1376px); }
-        }
-        
-        .carousel-wrapper {
-            overflow: hidden;
-            width: 100%;
-        }
-        
-        /* Custom button style */
-        .btn-primary {
-            background: linear-gradient(135deg, #e63946 0%, #c1121f 100%);
-            transition: all 0.3s ease;
-        }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(230, 57, 70, 0.3);
-        }
+        .bg-dark-blue { background-color: #0d152e; }
+        .text-dark-blue { color: #0d152e; }
+        .bg-primary-red { background-color: #c91414; }
+        .text-primary-red { color: #c91414; }
     </style>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <script src="js/load-partials.js"></script>
-  </head>
-  <body class="overflow-x-hidden">
+<script src="js/load-partials.js"></script>
+</head>
+<body class="overflow-x-hidden">
 
     <div id="header-container"></div>
 
-    <!-- Hero Section - New Design -->
-    <section class="relative bg-gradient-to-br from-dark-blue via-[#0a1f35] to-dark-blue pt-24 pb-40 overflow-hidden">
-        <!-- Animated background elements -->
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-20 left-10 w-64 h-64 bg-primary-red/10 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-10 right-20 w-96 h-96 bg-accent-gold/5 rounded-full blur-3xl"></div>
-            <div class="absolute top-1/2 left-1/3 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
+    <!-- Hero Section -->
+    <section class="relative bg-gray-100 pt-16 pb-32 overflow-hidden">
+        <!-- Background image placeholder (Insurance/Agency) -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Insurance Agency Background" class="w-full h-full object-cover object-center">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-transparent"></div>
         </div>
-        
-        <!-- Background Image -->
-        <div class="absolute inset-0 z-0 opacity-20">
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Background" class="w-full h-full object-cover">
-        </div>
-        
+
         <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="text-white">
-                    <div class="inline-flex items-center bg-primary-red/20 border border-primary-red/30 rounded-full px-4 py-2 mb-6">
-                        <span class="w-2 h-2 bg-primary-red rounded-full mr-2 animate-pulse"></span>
-                        <span class="text-sm font-medium text-primary-red">Florida's #1 Insurance Agency</span>
-                    </div>
-                    
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight serif">
-                        Insurance Made<br>
-                        <span class="text-primary-red">Simple & Affordable</span>
-                    </h1>
-                    
-                    <p class="text-lg text-gray-300 mb-8 leading-relaxed">
-                        Get comprehensive coverage at the lowest rates. We compare <strong class="text-white">40+ insurance carriers</strong> to find you the best deal.
-                    </p>
-                    
-                    <div class="flex flex-wrap gap-4 mb-8">
-                        <a href="#" class="btn-primary text-white px-8 py-4 rounded-lg font-bold text-lg inline-flex items-center">
-                            Get Free Quote <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                        <a href="tel:17272301000" class="bg-white/10 backdrop-blur border border-white/20 text-white px-8 py-4 rounded-lg font-bold text-lg inline-flex items-center hover:bg-white/20 transition">
-                            <i class="fas fa-phone-alt mr-2"></i> Call Now
-                        </a>
-                    </div>
-                    
-                    <!-- Trust badges -->
-                    <div class="flex flex-wrap items-center gap-6 text-sm">
-                        <div class="flex items-center">
-                            <div class="bg-primary-red/20 p-2 rounded-lg mr-3">
-                                <i class="fas fa-shield-alt text-primary-red"></i>
-                            </div>
-                            <span class="text-gray-300">Licensed in FL</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="bg-primary-red/20 p-2 rounded-lg mr-3">
-                                <i class="fas fa-users text-primary-red"></i>
-                            </div>
-                            <span class="text-gray-300">300K+ Clients</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="bg-primary-red/20 p-2 rounded-lg mr-3">
-                                <i class="fas fa-star text-primary-red"></i>
-                            </div>
-                            <span class="text-gray-300">5-Star Rated</span>
-                        </div>
-                    </div>
+            <div class="max-w-3xl text-white">
+                <div class="flex items-center text-xs font-bold tracking-wider text-primary-red mb-6 uppercase">
+                    <i class="fas fa-shield-alt mr-2 text-white/70"></i> <span class="text-white/70 mx-2 hover:text-white cursor-pointer">HOME</span> / <span class="ml-2">FREEDMANBROKERINSURANCE</span>
                 </div>
-                
-                <!-- Right side - Stats & Form -->
-                <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-                    <div class="grid grid-cols-2 gap-6 mb-8">
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-primary-red mb-1">500+</div>
-                            <div class="text-gray-400 text-sm">Million in Premiums</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-primary-red mb-1">100+</div>
-                            <div class="text-gray-400 text-sm">Florida Locations</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-primary-red mb-1">15+</div>
-                            <div class="text-gray-400 text-sm">Years Experience</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-primary-red mb-1">40+</div>
-                            <div class="text-gray-400 text-sm">Carriers Compared</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Quick quote form -->
-                    <form class="space-y-4">
-                        <input type="text" placeholder="Enter your zip code" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-primary-red">
-                        <select class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-primary-red">
-                            <option class="text-gray-900">Select Insurance Type</option>
-                            <option class="text-gray-900">Auto Insurance</option>
-                            <option class="text-gray-900">Home Insurance</option>
-                            <option class="text-gray-900">Life Insurance</option>
-                            <option class="text-gray-900">Business Insurance</option>
-                        </select>
-                        <button type="button" class="w-full bg-primary-red text-white py-3 rounded-lg font-bold hover:bg-red-700 transition">
-                            Get My Free Quote
-                        </button>
-                    </form>
+
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-[1.1] serif">
+                    Insurance Made<br>
+                    <span class="text-primary-red">Simple & Affordable</span>
+                </h1>
+
+                <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed font-light max-w-2xl">
+                    Get comprehensive coverage at the lowest rates. We compare 40+ top insurance carriers to find you the best deal. Florida's #1 independent agency serving every corner of the state.
+                </p>
+
+                <div class="mb-10 flex flex-wrap gap-4">
+                    <a href="#" class="bg-primary-red text-white px-10 py-4 rounded font-bold text-lg hover:bg-red-800 transition inline-flex items-center justify-center">
+                        Get a Free Quote <i class="fas fa-arrow-right ml-3 text-sm"></i>
+                    </a>
+                    <a href="tel:7865012059" class="bg-transparent border border-white/50 text-white px-10 py-4 rounded font-bold text-lg hover:bg-white/10 transition inline-flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Call 1-727-230-1000
+                    </a>
+                </div>
+
+                <div class="inline-flex items-center bg-yellow-900/40 rounded-full px-4 py-2 border border-yellow-700/50">
+                    <i class="fas fa-star text-yellow-500 mr-2"></i>
+                    <span class="text-sm font-semibold text-yellow-500">4.9/5.0 from 300,000+ clients</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Angled bottom border -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+            <svg class="relative block w-full h-[60px] md:h-[100px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 120L0 120 0 0 1200 120z" class="fill-[#0d152e]"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="bg-white py-12 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <i class="fas fa-users text-primary-red text-3xl mb-4"></i>
+                    <div class="text-4xl font-bold text-dark-blue">500K+</div>
+                    <div class="text-sm text-gray-600 uppercase tracking-wider">Happy Clients</div>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-handshake text-primary-red text-3xl mb-4"></i>
+                    <div class="text-4xl font-bold text-dark-blue">40+</div>
+                    <div class="text-sm text-gray-600 uppercase tracking-wider">Insurance Carriers</div>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-piggy-bank text-primary-red text-3xl mb-4"></i>
+                    <div class="text-4xl font-bold text-dark-blue">15%</div>
+                    <div class="text-sm text-gray-600 uppercase tracking-wider">Avg. Savings</div>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-star text-primary-red text-3xl mb-4"></i>
+                    <div class="text-4xl font-bold text-dark-blue">5.0</div>
+                    <div class="text-sm text-gray-600 uppercase tracking-wider">Google Rating</div>
                 </div>
             </div>
         </div>
     </section>
 
-<section class="py-16 md:py-24 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-        <div class="inline-block border border-red-200 text-primary-red text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-6 bg-red-50">
-            Insurance Options
-        </div>
-        <h2 class="text-3xl md:text-5xl font-bold mb-4 serif">Complete Coverage, One Destination</h2>
-        <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
-            From personal vehicles to commercial properties, we cover every aspect of your life. Explore our full range of protection plans below.
-        </p>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
-            <!-- Card 1 -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=500&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute top-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-red shadow">
-                        <i class="fas fa-car"></i>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 serif">Auto Insurance</h3>
-                    <p class="text-gray-500 text-sm mb-4">Drive with confidence knowing your vehicles are protected against collisions, theft, and unexpected liabilities.</p>
-                    <a href="#" class="text-primary-red font-semibold text-sm hover:underline">Get a Quote <i class="fas fa-arrow-right text-xs ml-1"></i></a>
-                </div>
-            </div>
+    <!-- Why Choose Us -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="inline-block border border-red-200 text-primary-red text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 bg-red-50">WHY CHOOSE US</span>
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 serif">Trusted Florida Insurance Experts</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-12">We make protecting what matters simple, affordable, and stress-free. Compare quotes from top carriers and find the perfect coverage for your needs.</p>
             
-            <!-- Card 2 -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute top-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-red shadow">
-                        <i class="fas fa-home"></i>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 serif">Home Insurance</h3>
-                    <p class="text-gray-500 text-sm mb-4">Defend your home against hurricanes, water damage, and burglary with our comprehensive homeowner policies.</p>
-                    <a href="#" class="text-primary-red font-semibold text-sm hover:underline">Get a Quote <i class="fas fa-arrow-right text-xs ml-1"></i></a>
-                </div>
-            </div>
-            
-            <!-- Card 3 -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute top-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-red shadow">
-                        <i class="fas fa-dollar-sign"></i>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 serif">Premium Financing</h3>
-                    <p class="text-gray-500 text-sm mb-4">Flexible financing options to help you manage insurance premiums with ease.</p>
-                    <a href="#" class="text-primary-red font-semibold text-sm hover:underline">Get a Quote <i class="fas fa-arrow-right text-xs ml-1"></i></a>
-                </div>
-            </div>
-            
-            <!-- Card 4 -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=500&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute top-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-red shadow">
-                        <i class="fas fa-city"></i>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 serif">Condo Insurance</h3>
-                    <p class="text-gray-500 text-sm mb-4">Coverage designed specifically for condominium owners.</p>
-                    <a href="#" class="text-primary-red font-semibold text-sm hover:underline">Get a Quote <i class="fas fa-arrow-right text-xs ml-1"></i></a>
-                </div>
-            </div>
-            
-            <!-- Card 5 -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1547683905-f686c993aae5?w=500&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute top-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-red shadow">
-                        <i class="fas fa-water"></i>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 serif">Flood Insurance</h3>
-                    <p class="text-gray-500 text-sm mb-4">Essential protection against flood damage, often required in Florida.</p>
-                    <a href="#" class="text-primary-red font-semibold text-sm hover:underline">Get a Quote <i class="fas fa-arrow-right text-xs ml-1"></i></a>
-                </div>
-            </div>
-            
-            <!-- Card 6 -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute top-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-red shadow">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 serif">Commercial Insurance</h3>
-                    <p class="text-gray-500 text-sm mb-4">Comprehensive coverage options for businesses of all sizes.</p>
-                    <a href="#" class="text-primary-red font-semibold text-sm hover:underline">Get a Quote <i class="fas fa-arrow-right text-xs ml-1"></i></a>
-                </div>
-            </div>
-            
-            <!-- Card 7 -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=500&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute top-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-red shadow">
-                        <i class="fas fa-file-signature"></i>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 serif">Performance Bonds</h3>
-                    <p class="text-gray-500 text-sm mb-4">Secure your contracts with performance bonds that protect your business and clients.</p>
-                    <a href="#" class="text-primary-red font-semibold text-sm hover:underline">Get a Quote <i class="fas fa-arrow-right text-xs ml-1"></i></a>
-                </div>
-            </div>
-            
-            <!-- Card 8 -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=500&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute top-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-red shadow">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 serif">Life Insurance</h3>
-                    <p class="text-gray-500 text-sm mb-4">Secure your family's financial future with our life insurance policies.</p>
-                    <a href="#" class="text-primary-red font-semibold text-sm hover:underline">Get a Quote <i class="fas fa-arrow-right text-xs ml-1"></i></a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="mt-12">
-            <a href="#" class="bg-primary-red text-white px-8 py-3.5 rounded font-bold hover:bg-red-800 transition inline-block">
-                View All Insurance Options
-            </a>
-        </div>
-    </div>
-</section>
-
-<section class="py-16 md:py-24 bg-white relative">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-        <div class="inline-block border border-gray-200 text-gray-500 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 bg-gray-50">
-            HOW IT WORKS
-        </div>
-        <h2 class="text-3xl md:text-5xl font-bold mb-4 serif">Four Simple Steps to Protection</h2>
-        <p class="text-gray-600 mb-16 max-w-2xl mx-auto">
-            Skip the复杂 paperwork and endless phone calls. Our streamlined approach gets you protected in minutes, not days.
-        </p>
-        
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
-            <!-- Connecting Line -->
-            <div class="hidden md:block absolute top-12 left-[10%] right-[10%] h-[2px] bg-gray-200 -z-10"></div>
-            
-            <!-- Step 1 -->
-            <div class="flex flex-col items-center">
-                <div class="w-24 h-24 bg-white rounded-full border-4 border-gray-100 flex items-center justify-center mb-6 relative shadow-md">
-                    <div class="w-20 h-20 bg-dark-blue rounded-full flex items-center justify-center text-white text-3xl">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <div class="absolute -top-2 -right-2 w-8 h-8 bg-primary-red text-white rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">
-                        1
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold mb-2 serif">Tell Us Your Needs</h3>
-                <p class="text-gray-500 text-sm">Share your coverage requirements and personal details so we can personalize your options.</p>
-            </div>
-            
-            <!-- Step 2 -->
-            <div class="flex flex-col items-center">
-                <div class="w-24 h-24 bg-white rounded-full border-4 border-gray-100 flex items-center justify-center mb-6 relative shadow-md">
-                    <div class="w-20 h-20 bg-dark-blue rounded-full flex items-center justify-center text-white text-3xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center text-primary-red text-2xl mb-6 mx-auto">
                         <i class="fas fa-search-dollar"></i>
                     </div>
-                    <div class="absolute -top-2 -right-2 w-8 h-8 bg-primary-red text-white rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">
-                        2
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold mb-2 serif">Review Custom Quotes</h3>
-                <p class="text-gray-500 text-sm">Receive side-by-side quotes from multiple carriers, ranked by price and coverage quality.</p>
-            </div>
-            
-            <!-- Step 3 -->
-            <div class="flex flex-col items-center">
-                <div class="w-24 h-24 bg-white rounded-full border-4 border-gray-100 flex items-center justify-center mb-6 relative shadow-md">
-                    <div class="w-20 h-20 bg-dark-blue rounded-full flex items-center justify-center text-white text-3xl">
-                        <i class="fas fa-hand-holding-usd"></i>
-                    </div>
-                    <div class="absolute -top-2 -right-2 w-8 h-8 bg-primary-red text-white rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">
-                        3
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold mb-2 serif">Pick Your Plan</h3>
-                <p class="text-gray-500 text-sm">Select the coverage that matches your budget, with expert advice available whenever you need it.</p>
-            </div>
-            
-            <!-- Step 4 -->
-            <div class="flex flex-col items-center">
-                <div class="w-24 h-24 bg-white rounded-full border-4 border-gray-100 flex items-center justify-center mb-6 relative shadow-md">
-                    <div class="w-20 h-20 bg-dark-blue rounded-full flex items-center justify-center text-white text-3xl">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="absolute -top-2 -right-2 w-8 h-8 bg-primary-red text-white rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">
-                        4
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold mb-2 serif">Enjoy Peace of Mind</h3>
-                <p class="text-gray-500 text-sm">Activate your policy instantly and rest easy knowing your assets are fully protected.</p>
-            </div>
-        </div>
-        
-        <div class="mt-12">
-            <a href="#" class="bg-primary-red text-white px-8 py-3.5 rounded font-bold hover:bg-red-800 transition inline-block">
-                Start My Quote
-            </a>
-            <p class="text-gray-400 text-xs mt-3">Takes less than 5 minutes. No credit card required.</p>
-        </div>
-    </div>
-</section>
-
-<section class="py-16 md:py-24 bg-gray-50 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-            <!-- Text Content -->
-            <div class="w-full lg:w-1/2">
-                <div class="inline-block border border-red-200 text-primary-red text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-6 bg-red-50">
-                    WHY CHOOSE US
-                </div>
-                <h2 class="text-3xl md:text-5xl font-bold mb-6 serif leading-tight">
-                    Advanced Tools.<br>
-                    <span class="italic font-light">Expert Guidance.<br>Optimal Outcomes.</span>
-                </h2>
-                <p class="text-gray-600 mb-8 leading-relaxed">
-                    Our hybrid approach combines cutting-edge technology with human expertise. We analyze your unique situation to deliver custom insurance strategies that truly work for you.
-                </p>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                    <!-- Feature 1 -->
-                    <div class="flex items-start">
-                        <div class="w-10 h-10 rounded-full bg-red-50 text-primary-red flex items-center justify-center shrink-0 mr-4">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold mb-1">Instant Analysis</h4>
-                            <p class="text-sm text-gray-500">Our intelligent system evaluates dozens of carriers in seconds, presenting you with optimal options for your specific profile.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Feature 2 -->
-                    <div class="flex items-start">
-                        <div class="w-10 h-10 rounded-full bg-red-50 text-primary-red flex items-center justify-center shrink-0 mr-4">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold mb-1">Specialized Advisors</h4>
-                            <p class="text-sm text-gray-500">Our licensed specialists bring deep Florida market knowledge to help you navigate complex coverage decisions.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Feature 3 -->
-                    <div class="flex items-start">
-                        <div class="w-10 h-10 rounded-full bg-red-50 text-primary-red flex items-center justify-center shrink-0 mr-4">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold mb-1">Fast Service</h4>
-                            <p class="text-sm text-gray-500">Get covered in minutes, not days. We've streamlined the entire process from quote to binding.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Feature 4 -->
-                    <div class="flex items-start">
-                        <div class="w-10 h-10 rounded-full bg-red-50 text-primary-red flex items-center justify-center shrink-0 mr-4">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold mb-1">24/7 Support</h4>
-                            <p class="text-sm text-gray-500">Access your policy documents, make payments, and file claims online anytime, anywhere.</p>
-                        </div>
-                    </div>
+                    <h3 class="text-xl font-bold mb-3 serif">Instant Analysis</h3>
+                    <p class="text-gray-500 text-sm">Get real-time quotes from 40+ carriers instantly. Compare coverage options side-by-side with our modern platform.</p>
                 </div>
                 
-                <div class="mt-10 flex items-center gap-6">
-                    <a href="#" class="bg-primary-red text-white px-8 py-3.5 rounded font-bold hover:bg-red-800 transition">
-                        Get Started
-                    </a>
-                    <div class="flex items-center text-dark-blue font-bold">
-                        <i class="fas fa-phone-alt text-primary-red mr-2"></i> 1-727-230-1000
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center text-primary-red text-2xl mb-6 mx-auto">
+                        <i class="fas fa-user-tie"></i>
                     </div>
-                </div>
-            </div>
-            
-            <!-- Image -->
-            <div class="w-full lg:w-1/2 relative">
-                <div class="relative rounded-2xl overflow-hidden shadow-2xl z-10">
-                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&h=800&fit=crop" alt="Team" class="w-full h-auto">
-                    
-                    <!-- Overlay Card -->
-                    <div class="absolute bottom-6 left-6 right-6 bg-dark-blue/95 backdrop-blur-sm rounded-xl p-5 text-white shadow-xl flex items-center gap-4">
-                        <div class="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center shrink-0 text-xl">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <div>
-                            <p class="text-sm italic mb-2">"Incredible service! Found me a great policy and saved me $500 a year."</p>
-                            <div class="flex items-center justify-between">
-                                <div class="text-xs font-bold text-gray-300">- Sarah M., Tampa</div>
-                                <div class="flex text-yellow-400 text-[10px]">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h3 class="text-xl font-bold mb-3 serif">Specialized Advisors</h3>
+                    <p class="text-gray-500 text-sm">Our licensed agents are experts in auto, home, business, and specialty insurance. Get personalized guidance for your situation.</p>
                 </div>
                 
-                <!-- Background decorative elements -->
-                <div class="absolute -top-6 -right-6 w-32 h-32 bg-red-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
-                <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-blue-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="py-16 md:py-24 bg-dark-blue text-white" id="awardsSection">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-        <div class="inline-block border border-gray-600 text-gray-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 bg-white/5">
-            AWARD WINNING AGENCY
-        </div>
-        <h2 class="text-3xl md:text-5xl font-bold mb-4 serif text-yellow-500">Recognized Excellence<br>in Insurance</h2>
-        <p class="text-gray-300 mb-16 max-w-2xl mx-auto">
-            Our consistent growth and customer satisfaction have earned us accolades from leading industry publications and organizations.
-        </p>
-        
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="awardsGrid">
-            <!-- Award Placeholders -->
-            <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center h-48 hover:bg-white/10 transition">
-                <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
-                    <i class="fas fa-trophy"></i>
-                </div>
-                <h4 class="font-bold text-sm text-center">Inc. 5000</h4>
-                <p class="text-xs text-gray-400 mt-2 text-center">Fastest Growing Companies</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center h-48 hover:bg-white/10 transition">
-                <div class="w-16 h-16 bg-gradient-to-br from-gray-300 to-gray-500 rounded-full flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
-                    <i class="fas fa-medal"></i>
-                </div>
-                <h4 class="font-bold text-sm text-center">Top Insurance Agency</h4>
-                <p class="text-xs text-gray-400 mt-2 text-center">2023 Excellence Award</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center h-48 hover:bg-white/10 transition">
-                <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
-                    <i class="fas fa-certificate"></i>
-                </div>
-                <h4 class="font-bold text-sm text-center">Best Places to Work</h4>
-                <p class="text-xs text-gray-400 mt-2 text-center">Tampa Bay Business Journal</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center h-48 hover:bg-white/10 transition">
-                <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
-                    <i class="fas fa-star"></i>
-                </div>
-                <h4 class="font-bold text-sm text-center">Top Rated Local</h4>
-                <p class="text-xs text-gray-400 mt-2 text-center">5-Star Customer Satisfaction</p>
-            </div>
-            
-             <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center h-48 hover:bg-white/10 transition">
-                <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
-                    <i class="fas fa-users"></i>
-                </div>
-                <h4 class="font-bold text-sm text-center">Community Leader</h4>
-                <p class="text-xs text-gray-400 mt-2 text-center">Outstanding Contribution</p>
-            </div>
-             <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center h-48 hover:bg-white/10 transition">
-                <div class="w-16 h-16 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <h4 class="font-bold text-sm text-center">Customer Choice</h4>
-                <p class="text-xs text-gray-400 mt-2 text-center">Voted #1 by Floridians</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center h-48 hover:bg-white/10 transition">
-                <div class="w-16 h-16 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
-                    <i class="fas fa-shield-check"></i>
-                </div>
-                <h4 class="font-bold text-sm text-center">Elite Agency</h4>
-                <p class="text-xs text-gray-400 mt-2 text-center">Carrier Recognition</p>
-            </div>
-        </div>
-        
-        <div class="mt-12 text-gray-400 text-sm">
-            "We are honored to be recognized for our commitment to excellence."
-        </div>
-    </div>
-</section>
-
-<section class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-        <div class="inline-block border border-red-200 text-primary-red text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-6 bg-red-50">
-            OUR LOCATIONS
-        </div>
-        <h2 class="text-3xl md:text-5xl font-bold mb-4 serif">Florida-Wide Presence,<br>Local Expertise</h2>
-        <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
-            Our statewide footprint means there's always a nearby office ready to serve you. Each location understands the unique risks of its community.
-        </p>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
-            <!-- Location 1 -->
-            <div class="border border-gray-200 rounded-xl p-6 text-left hover:border-primary-red transition flex flex-col justify-between">
-                <div>
-                    <div class="w-10 h-10 bg-red-50 rounded-full flex items-center justify-center text-primary-red mb-4">
-                        <i class="fas fa-map-marker-alt"></i>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center text-primary-red text-2xl mb-6 mx-auto">
+                        <i class="fas fa-bolt"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Tampa (Headquarters)</h3>
-                    <p class="text-gray-500 text-sm mb-4">1234 Insurance Blvd, Suite 100<br>Tampa, FL 33602</p>
-                </div>
-                <a href="#" class="text-primary-red font-semibold text-sm hover:underline">Get Directions <i class="fas fa-arrow-right text-[10px] ml-1"></i></a>
-            </div>
-            
-            <!-- Location 2 -->
-            <div class="border border-gray-200 rounded-xl p-6 text-left hover:border-primary-red transition flex flex-col justify-between">
-                <div>
-                    <div class="w-10 h-10 bg-red-50 rounded-full flex items-center justify-center text-primary-red mb-4">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Orlando Branch</h3>
-                    <p class="text-gray-500 text-sm mb-4">5678 Citrus Ave, Bldg B<br>Orlando, FL 32801</p>
-                </div>
-                <a href="#" class="text-primary-red font-semibold text-sm hover:underline">Get Directions <i class="fas fa-arrow-right text-[10px] ml-1"></i></a>
-            </div>
-        </div>
-        
-        <div class="bg-gray-50 border border-gray-200 rounded-xl p-8 text-left">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 pb-4 border-b border-gray-200">
-                 <h3 class="font-bold text-lg"><i class="fas fa-building text-gray-400 mr-2"></i> All Florida Cities</h3>
-                 <a href="#" class="bg-primary-red text-white px-4 py-2 rounded text-sm font-bold mt-4 sm:mt-0">Find a Location</a>
-            </div>
-            
-            <!-- City List Columns -->
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-4 gap-x-2 text-sm text-gray-600">
-                <a href="#" class="hover:text-primary-red">Miami</a>
-                <a href="#" class="hover:text-primary-red">Jacksonville</a>
-                <a href="#" class="hover:text-primary-red">Tampa</a>
-                <a href="#" class="hover:text-primary-red">Orlando</a>
-                <a href="#" class="hover:text-primary-red">St. Petersburg</a>
-                <a href="#" class="hover:text-primary-red">Hialeah</a>
-                <a href="#" class="hover:text-primary-red">Port St. Lucie</a>
-                <a href="#" class="hover:text-primary-red">Cape Coral</a>
-                <a href="#" class="hover:text-primary-red">Tallahassee</a>
-                <a href="#" class="hover:text-primary-red">Fort Lauderdale</a>
-                <a href="#" class="hover:text-primary-red">Pembroke Pines</a>
-                <a href="#" class="hover:text-primary-red">Hollywood</a>
-                <a href="#" class="hover:text-primary-red">Gainesville</a>
-                <a href="#" class="hover:text-primary-red">Miramar</a>
-                <a href="#" class="hover:text-primary-red">Coral Springs</a>
-                <a href="#" class="hover:text-primary-red">Clearwater</a>
-                <a href="#" class="hover:text-primary-red">Palm Bay</a>
-                <a href="#" class="hover:text-primary-red">West Palm Beach</a>
-                <a href="#" class="hover:text-primary-red">Pompano Beach</a>
-                <a href="#" class="hover:text-primary-red">Lakeland</a>
-                <a href="#" class="hover:text-primary-red">Boca Raton</a>
-                <a href="#" class="hover:text-primary-red">Plantation</a>
-                <a href="#" class="hover:text-primary-red">Sunrise</a>
-                <a href="#" class="hover:text-primary-red">Deltona</a>
-                <a href="#" class="hover:text-primary-red">Miami Beach</a>
-            </div>
-        </div>
-        <p class="text-xs text-gray-400 mt-6 text-left">
-            Don't see your city? We are licensed in the entire state of Florida.
-        </p>
-    </div>
-</section>
-
-<section class="py-16 md:py-24 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="flex flex-col md:flex-row gap-12 items-center">
-            <div class="w-full md:w-1/2">
-                 <div class="inline-block border border-red-200 text-primary-red text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-6 bg-red-50">
-                    OUR EXPERTS
-                </div>
-                <h2 class="text-3xl md:text-5xl font-bold mb-6 serif">Knowledgeable Agents,<br>Multi-State Expertise</h2>
-                <p class="text-gray-600 mb-8">
-                    Our team brings decades of combined experience to every consultation. Licensed across 45 states, we offer versatile coverage solutions for clients nationwide.
-                </p>
-                <p class="text-gray-600 mb-10">
-                    Whether you're seeking multi-policy discounts or need help filing a complex claim, our professionals guide you through every decision.
-                </p>
-                
-                <div class="flex gap-6 mb-10">
-                    <div class="text-center bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex-1">
-                        <div class="text-3xl font-bold text-dark-blue mb-1">50+</div>
-                        <div class="text-xs text-gray-500 font-bold uppercase tracking-wider">Licensed Agents</div>
-                    </div>
-                    <div class="text-center bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex-1">
-                        <div class="text-3xl font-bold text-dark-blue mb-1">45</div>
-                        <div class="text-xs text-gray-500 font-bold uppercase tracking-wider">States Licensed</div>
-                    </div>
-                     <div class="text-center bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex-1">
-                        <div class="text-3xl font-bold text-dark-blue mb-1">10+</div>
-                        <div class="text-xs text-gray-500 font-bold uppercase tracking-wider">Years Experience Avg.</div>
-                    </div>
+                    <h3 class="text-xl font-bold mb-3 serif">Fast Service</h3>
+                    <p class="text-gray-500 text-sm">Get quotes and bind coverage in minutes, not days. Same-day policy issuance available for most insurance types.</p>
                 </div>
                 
-                <a href="#" class="bg-primary-red text-white px-8 py-3.5 rounded font-bold hover:bg-red-800 transition inline-block">
-                    Speak with an Agent
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center text-primary-red text-2xl mb-6 mx-auto">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 serif">24/7 Support</h3>
+                    <p class="text-gray-500 text-sm">Questions or claims? Our dedicated support team is available around the clock to assist you when you need us most.</p>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center text-primary-red text-2xl mb-6 mx-auto">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 serif">Bundle & Save</h3>
+                    <p class="text-gray-500 text-sm">Combine auto, home, and other policies to save up to 25%. One bill, one agent, maximum convenience and savings.</p>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center text-primary-red text-2xl mb-6 mx-auto">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 serif">Free Quotes</h3>
+                    <p class="text-gray-500 text-sm">No obligation, no fees. Get personalized quotes tailored to your exact coverage needs and budget constraints.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <span class="inline-block border border-red-200 text-primary-red text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 bg-red-50">INSURANCE PRODUCTS</span>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 serif">Comprehensive Coverage for Every Need</h2>
+                <p class="text-gray-600">From auto and home to business and specialty insurance, we have the right coverage to protect what matters most to you.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Auto Insurance -->
+                <a href="auto-insurance.html" class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center text-primary-red text-2xl mb-4">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 serif text-dark-blue">Auto Insurance</h3>
+                    <p class="text-gray-600 text-sm mb-4">Liability, collision, comprehensive, and more for personal and commercial vehicles.</p>
+                    <span class="text-primary-red text-sm font-semibold">Get a Quote <i class="fas fa-arrow-right ml-1 text-xs"></i></span>
+                </a>
+
+                <!-- Home Insurance -->
+                <a href="home-insurance.html" class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center text-primary-red text-2xl mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 serif text-dark-blue">Home Insurance</h3>
+                    <p class="text-gray-600 text-sm mb-4">Dwelling, personal property, liability, and additional living expense coverage.</p>
+                    <span class="text-primary-red text-sm font-semibold">Get a Quote <i class="fas fa-arrow-right ml-1 text-xs"></i></span>
+                </a>
+
+                <!-- Premium Financing -->
+                <a href="premium-financing.html" class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center text-primary-red text-2xl mb-4">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 serif text-dark-blue">Premium Financing</h3>
+                    <p class="text-gray-600 text-sm mb-4">Spread your insurance payments over time with competitive financing options.</p>
+                    <span class="text-primary-red text-sm font-semibold">Apply Now <i class="fas fa-arrow-right ml-1 text-xs"></i></span>
+                </a>
+
+                <!-- Condo Insurance -->
+                <a href="#" class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center text-primary-red text-2xl mb-4">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 serif text-dark-blue">Condo Insurance</h3>
+                    <p class="text-gray-600 text-sm mb-4">HO-6 policies covering interior, personal property, and liability for condo owners.</p>
+                    <span class="text-primary-red text-sm font-semibold">Get a Quote <i class="fas fa-arrow-right ml-1 text-xs"></i></span>
+                </a>
+
+                <!-- Flood Insurance -->
+                <a href="flood-insurance.html" class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center text-primary-red text-2xl mb-4">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 serif text-dark-blue">Flood Insurance</h3>
+                    <p class="text-gray-600 text-sm mb-4">NFIP and private flood coverage for Florida homes and businesses.</p>
+                    <span class="text-primary-red text-sm font-semibold">Get a Quote <i class="fas fa-arrow-right ml-1 text-xs"></i></span>
+                </a>
+
+                <!-- Commercial Insurance -->
+                <a href="commercial-insurance.html" class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center text-primary-red text-2xl mb-4">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 serif text-dark-blue">Commercial Insurance</h3>
+                    <p class="text-gray-600 text-sm mb-4">General liability, property, workers' comp, and professional liability for businesses.</p>
+                    <span class="text-primary-red text-sm font-semibold">Get a Quote <i class="fas fa-arrow-right ml-1 text-xs"></i></span>
+                </a>
+
+                <!-- Performance Bonds -->
+                <a href="performance-bonds.html" class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center text-primary-red text-2xl mb-4">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 serif text-dark-blue">Performance Bonds</h3>
+                    <p class="text-gray-600 text-sm mb-4">Secure construction contracts with fast-issued performance and payment bonds.</p>
+                    <span class="text-primary-red text-sm font-semibold">Apply Now <i class="fas fa-arrow-right ml-1 text-xs"></i></span>
+                </a>
+
+                <!-- Life Insurance -->
+                <a href="life-insurance.html" class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center text-primary-red text-2xl mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 serif text-dark-blue">Life Insurance</h3>
+                    <p class="text-gray-600 text-sm mb-4">Term, whole life, and final expense policies to protect your family's future.</p>
+                    <span class="text-primary-red text-sm font-semibold">Get a Quote <i class="fas fa-arrow-right ml-1 text-xs"></i></span>
                 </a>
             </div>
-            
-            <div class="w-full md:w-1/2 flex justify-center md:justify-end">
-                <div class="relative w-full max-w-lg overflow-hidden">
-                    <div class="flex gap-4 agent-carousel" id="agentCarousel">
-                        <!-- Agent 1 -->
-                        <div class="w-48 md:w-56 bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 flex-shrink-0 relative">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&h=600&fit=crop" class="w-full h-64 md:h-72 object-cover">
-                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
-                                <div class="font-bold">Maria Garcia</div>
-                                <div class="text-xs text-gray-300 mb-2">Senior Agent</div>
-                                <div class="inline-block bg-primary-red text-white text-[10px] px-2 py-0.5 rounded">Se Habla Español</div>
-                            </div>
-                        </div>
-                        
-                        <!-- Agent 2 -->
-                        <div class="w-48 md:w-56 bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 flex-shrink-0 relative">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&h=600&fit=crop" class="w-full h-64 md:h-72 object-cover">
-                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
-                                <div class="font-bold">David Chen</div>
-                                <div class="text-xs text-gray-300 mb-2">Commercial Specialist</div>
-                                <div class="flex gap-1 text-yellow-400 text-xs">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Agent 3 -->
-                        <div class="w-48 md:w-56 bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 flex-shrink-0 relative">
-                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&h=600&fit=crop" class="w-full h-64 md:h-72 object-cover">
-                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
-                                <div class="font-bold">Sarah Johnson</div>
-                                <div class="text-xs text-gray-300 mb-2">Home Insurance Expert</div>
-                                <div class="inline-block bg-green-600 text-white text-[10px] px-2 py-0.5 rounded">Top Performer</div>
-                            </div>
-                        </div>
-                        
-                        <!-- Agent 4 -->
-                        <div class="w-48 md:w-56 bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 flex-shrink-0 relative">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=600&fit=crop" class="w-full h-64 md:h-72 object-cover">
-                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
-                                <div class="font-bold">Michael Torres</div>
-                                <div class="text-xs text-gray-300 mb-2">Claims Manager</div>
-                                <div class="flex gap-1 text-yellow-400 text-xs">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Agent 5 -->
-                        <div class="w-48 md:w-56 bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 flex-shrink-0 relative">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=600&fit=crop" class="w-full h-64 md:h-72 object-cover">
-                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
-                                <div class="font-bold">Emily Williams</div>
-                                <div class="text-xs text-gray-300 mb-2">Life Insurance Specialist</div>
-                                <div class="inline-block bg-primary-red text-white text-[10px] px-2 py-0.5 rounded">Se Habla Español</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Carousel Controls -->
-                    <div class="flex justify-center mt-6 gap-4">
-                        <button onclick="moveCarousel(-1)" class="w-10 h-10 rounded-full border-2 border-primary-red text-primary-red hover:bg-primary-red hover:text-white transition flex items-center justify-center">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <div class="flex gap-2 items-center" id="carouselDots"></div>
-                        <button onclick="moveCarousel(1)" class="w-10 h-10 rounded-full border-2 border-primary-red text-primary-red hover:bg-primary-red hover:text-white transition flex items-center justify-center">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section class="py-16 md:py-24 bg-white border-t border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-        <div class="inline-block border border-red-200 text-primary-red text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-6 bg-red-50">
-            <i class="fas fa-user-tie mr-1"></i> FRANCHISE OPPORTUNITY
-        </div>
-        <h2 class="text-3xl md:text-5xl font-bold mb-6 serif">Build Your Future with<br>Our Franchise Model</h2>
-        <p class="text-gray-600 mb-12 max-w-3xl mx-auto">
-            Join our expanding network of successful insurance agencies. With proven systems, extensive carrier relationships, and comprehensive support, your entrepreneurial journey starts here.
-        </p>
-        
-        <div class="flex flex-col lg:flex-row items-center gap-12 bg-gray-50 rounded-2xl p-6 md:p-10 border border-gray-200 text-left">
-            <div class="w-full lg:w-5/12">
-                 <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop" class="rounded-xl shadow-md w-full h-auto object-cover">
-                 <div class="bg-dark-blue text-white p-4 rounded-xl mt-[-30px] ml-6 relative z-10 w-2/3 shadow-lg">
-                     <div class="text-2xl font-bold serif text-yellow-500 mb-1">100+</div>
-                     <div class="text-xs">Successful Franchise Locations Active</div>
-                 </div>
-            </div>
-            
-            <div class="w-full lg:w-7/12">
-                <h3 class="text-2xl font-bold mb-6">Why Partner with FreedmanBroker Insurance?</h3>
-                
-                <div class="space-y-6">
-                    <div class="flex items-start">
-                        <div class="w-10 h-10 rounded bg-red-100 text-primary-red flex items-center justify-center shrink-0 mr-4">
-                            <i class="fas fa-hands-helping"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg mb-1">Turn-key Agency Model</h4>
-                            <p class="text-sm text-gray-600">Leverage our proven systems, technology stack, and branding to launch your agency quickly and effectively.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start">
-                        <div class="w-10 h-10 rounded bg-red-100 text-primary-red flex items-center justify-center shrink-0 mr-4">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg mb-1">Access to Top Carriers</h4>
-                            <p class="text-sm text-gray-600">Gain immediate appointments with 40+ national and regional carriers - bypassing strict volume requirements.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start">
-                        <div class="w-10 h-10 rounded bg-red-100 text-primary-red flex items-center justify-center shrink-0 mr-4">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg mb-1">Training & Support</h4>
-                            <p class="text-sm text-gray-600">Comprehensive training programs for you and your staff, plus ongoing marketing and operational support.</p>
-                        </div>
-                    </div>
-                     <div class="flex items-start">
-                        <div class="w-10 h-10 rounded bg-red-100 text-primary-red flex items-center justify-center shrink-0 mr-4">
-                            <i class="fas fa-bullhorn"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg mb-1">Marketing Power</h4>
-                            <p class="text-sm text-gray-600">Benefit from statewide marketing campaigns, localized lead generation, and a trusted brand name.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mt-8 flex flex-wrap gap-4 items-center">
-                    <a href="#" class="bg-primary-red text-white px-8 py-3 rounded font-bold hover:bg-red-800 transition">
-                        Become a Franchisee <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                    </a>
-                    <div class="text-dark-blue font-bold px-4 py-3 bg-white border border-gray-200 rounded">
-                        Call: 1-800-FRANCHISE
-                    </div>
-                </div>
+            <div class="mt-12 text-center">
+                <a href="services.html" class="bg-transparent border-2 border-primary-red text-primary-red px-8 py-3 rounded font-bold hover:bg-primary-red hover:text-white transition inline-block">
+                    View All Insurance Options
+                </a>
             </div>
         </div>
-        
-        <div class="mt-16">
-            <h3 class="text-xl font-bold mb-8">How to Get Started</h3>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-                <div class="bg-white border border-gray-100 rounded-xl p-6 shadow-sm relative">
-                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-dark-blue font-bold text-xl mx-auto mb-4">1</div>
-                    <h4 class="font-bold mb-2">Submit Inquiry</h4>
-                    <p class="text-xs text-gray-500">Fill out our franchise inquiry form to request our Franchise Disclosure Document (FDD).</p>
-                </div>
-                <div class="bg-white border border-gray-100 rounded-xl p-6 shadow-sm relative">
-                     <div class="hidden md:block absolute top-12 -left-3 w-6 h-[2px] bg-gray-200"></div>
-                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-dark-blue font-bold text-xl mx-auto mb-4">2</div>
-                    <h4 class="font-bold mb-2">Discovery Call</h4>
-                    <p class="text-xs text-gray-500">Speak with our franchise development team to discuss qualifications, territory availability, and investment.</p>
-                </div>
-                <div class="bg-white border border-gray-100 rounded-xl p-6 shadow-sm relative">
-                    <div class="hidden md:block absolute top-12 -left-3 w-6 h-[2px] bg-gray-200"></div>
-                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-dark-blue font-bold text-xl mx-auto mb-4">3</div>
-                    <h4 class="font-bold mb-2">Review Agreement</h4>
-                    <p class="text-xs text-gray-500">Review the FDD and Franchise Agreement with your legal counsel and sign to secure your territory.</p>
-                </div>
-                <div class="bg-white border border-gray-100 rounded-xl p-6 shadow-sm relative">
-                    <div class="hidden md:block absolute top-12 -left-3 w-6 h-[2px] bg-gray-200"></div>
-                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-dark-blue font-bold text-xl mx-auto mb-4">4</div>
-                    <h4 class="font-bold mb-2">Open Your Agency</h4>
-                    <p class="text-xs text-gray-500">Complete our rigorous training program and open the doors to your new FreedmanBroker Insurance Insurance agency.</p>
-                </div>
-            </div>
-            
-            <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 mt-8 text-sm font-semibold text-gray-600">
-                <div class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Low initial investment</div>
-                <div class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> High retention rates</div>
-                <div class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Exclusive territories available</div>
-                <div class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Ongoing training and support</div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--
-<section class="py-16 md:py-24 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-        <div class="flex items-center justify-center gap-2 mb-6">
-            <div class="flex -space-x-2">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=50&h=50&fit=crop" class="w-8 h-8 rounded-full border-2 border-white">
-                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=50&h=50&fit=crop" class="w-8 h-8 rounded-full border-2 border-white">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&h=50&fit=crop" class="w-8 h-8 rounded-full border-2 border-white">
-            </div>
-            <div class="bg-gray-200 text-gray-700 text-xs font-bold px-3 py-1 rounded-full flex items-center">
-                <i class="fab fa-google text-blue-500 mr-1"></i> 5.0 Google Reviews
-            </div>
-            <div class="inline-block border border-red-200 text-primary-red text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider bg-red-50">
-                REAL CUSTOMER REVIEWS
-            </div>
-        </div>
-        
-        <!-- Testimonials Carousel Section 
-        <section class="py-20 bg-gray-100">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="text-center mb-12">
-                    <div class="inline-flex items-center bg-primary-red/10 border border-primary-red/20 rounded-full px-6 py-3 mb-6">
-                        <i class="fas fa-quote-left text-primary-red mr-2"></i>
-                        <span class="text-sm font-bold text-primary-red uppercase tracking-wider">Client Reviews</span>
-                    </div>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-4 serif text-dark-blue">What Our Clients Say</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">
-                        Real stories from real customers across Florida
-                    </p>
-                </div>
-                
-                <div class="relative">
-                    <div id="testimonialCarousel" class="flex gap-6 overflow-x-auto pb-4 scroll-smooth" style="scroll-behavior: smooth;">
-                        <!-- Testimonial 1 
-                        <div class="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-xl shadow-md border border-gray-200 flex-shrink-0">
-                            <div class="flex text-yellow-400 mb-4">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="text-gray-600 italic mb-6 leading-relaxed">
-                                "FreedmanBroker Insurance saved me hundreds of dollars! The agent was patient, professional, and found me an amazing rate. Highly recommend!"
-                            </p>
-                            <div class="flex items-center border-t border-gray-100 pt-4">
-                                <div class="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">JD</div>
-                                <div>
-                                    <div class="font-bold text-dark-blue">John D.</div>
-                                    <div class="text-xs text-gray-500">Tampa, FL</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Testimonial 2 
-                        <div class="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-xl shadow-md border border-gray-200 flex-shrink-0">
-                            <div class="flex text-yellow-400 mb-4">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="text-gray-600 italic mb-6 leading-relaxed">
-                                "Been with them for 5 years. Always great rates and excellent customer service. They really care about their clients!"
-                            </p>
-                            <div class="flex items-center border-t border-gray-100 pt-4">
-                                <div class="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">MS</div>
-                                <div>
-                                    <div class="font-bold text-dark-blue">Mary S.</div>
-                                    <div class="text-xs text-gray-500">Orlando, FL</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Testimonial 3 
-                        <div class="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-xl shadow-md border border-gray-200 flex-shrink-0">
-                            <div class="flex text-yellow-400 mb-4">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="text-gray-600 italic mb-6 leading-relaxed">
-                                "Smooth process getting my business insurance. The agent explained everything clearly. Will definitely use again!"
-                            </p>
-                            <div class="flex items-center border-t border-gray-100 pt-4">
-                                <div class="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">RJ</div>
-                                <div>
-                                    <div class="font-bold text-dark-blue">Robert J.</div>
-                                    <div class="text-xs text-gray-500">Miami, FL</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Testimonial 4 
-                        <div class="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-xl shadow-md border border-gray-200 flex-shrink-0">
-                            <div class="flex text-yellow-400 mb-4">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="text-gray-600 italic mb-6 leading-relaxed">
-                                "When my roof was damaged in a storm, they handled the claim incredibly fast. So grateful to have an agency that actually cares!"
-                            </p>
-                            <div class="flex items-center border-t border-gray-100 pt-4">
-                                <div class="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">EW</div>
-                                <div>
-                                    <div class="font-bold text-dark-blue">Emily W.</div>
-                                    <div class="text-xs text-gray-500">Jacksonville, FL</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Testimonial 5 
-                        <div class="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-xl shadow-md border border-gray-200 flex-shrink-0">
-                            <div class="flex text-yellow-400 mb-4">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="text-gray-600 italic mb-6 leading-relaxed">
-                                "Bundled auto and home insurance and saved over $400/year! Great service and always available when I need them."
-                            </p>
-                            <div class="flex items-center border-t border-gray-100 pt-4">
-                                <div class="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">DB</div>
-                                <div>
-                                    <div class="font-bold text-dark-blue">David B.</div>
-                                    <div class="text-xs text-gray-500">Fort Lauderdale, FL</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Testimonial 6 
-                        <div class="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-xl shadow-md border border-gray-200 flex-shrink-0">
-                            <div class="flex text-yellow-400 mb-4">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="text-gray-600 italic mb-6 leading-relaxed">
-                                "First time buying home insurance and they made it so easy! Got a great rate and the process was smooth."
-                            </p>
-                            <div class="flex items-center border-t border-gray-100 pt-4">
-                                <div class="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">ST</div>
-                                <div>
-                                    <div class="font-bold text-dark-blue">Sarah T.</div>
-                                    <div class="text-xs text-gray-500">Sarasota, FL</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Navigation buttons 
-                    <button id="prevTestimonial" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 w-12 h-12 rounded-full bg-white shadow-lg border border-gray-200 text-dark-blue hover:bg-dark-blue hover:text-white transition flex items-center justify-center z-10">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button id="nextTestimonial" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 w-12 h-12 rounded-full bg-white shadow-lg border border-gray-200 text-dark-blue hover:bg-dark-blue hover:text-white transition flex items-center justify-center z-10">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-                
-                <div class="text-center mt-10">
-                    <div class="inline-flex items-center bg-dark-blue text-white px-6 py-3 rounded-lg">
-                        <i class="fab fa-google mr-3"></i>
-                        <span class="font-bold">4.9/5</span>
-                        <span class="text-gray-300 mx-2">from</span>
-                        <span class="font-bold">10,000+</span>
-                        <span class="text-gray-300 ml-1">Google Reviews</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Next section would be FAQ or other content -->
-
-<section class="py-16 md:py-24 bg-white">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-        <div class="inline-flex items-center justify-center bg-primary-red/10 border border-primary-red/20 rounded-full px-6 py-3 mb-6">
-            <i class="fas fa-question-circle text-primary-red mr-2"></i>
-            <span class="text-sm font-bold text-primary-red uppercase tracking-wider">Frequently Asked Questions</span>
-        </div>
-        
-        <h2 class="text-3xl md:text-5xl font-bold mb-4 serif">Got Questions? We've Got Answers</h2>
-        <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
-            Find quick answers to common questions about our insurance services. Can't find what you're looking for? Our team is here to help!
-        </p>
-        
-        <div class="space-y-4 text-left bg-gray-50 rounded-2xl p-6 md:p-8">
-            <!-- FAQ 1 (Open) -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
-                <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-50 transition focus:outline-none">
-                    <span>What information do I need to get an auto insurance quote?</span>
-                    <i class="fas fa-chevron-down text-primary-red transform transition-transform"></i>
-                </button>
-                <div class="faq-content p-5 bg-white text-gray-600 text-sm border-t border-gray-100 leading-relaxed">
-                    To provide an accurate auto insurance quote, we typically need your driver's license number, the vehicle identification number (VIN) for the car(s) you want to insure, the address where the car is garaged, and details about your driving history (accidents, tickets, etc.). Our process takes just 5-10 minutes!
-                </div>
-            </div>
-            
-            <!-- FAQ 2 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
-                <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-50 transition focus:outline-none">
-                    <span>Is FreedmanBroker Insurance licensed in Florida?</span>
-                    <i class="fas fa-chevron-down text-gray-400 transform transition-transform"></i>
-                </button>
-                <div class="faq-content hidden p-5 bg-white text-gray-600 text-sm border-t border-gray-100 leading-relaxed">
-                    Yes! FreedmanBroker Insurance is fully licensed in Florida. We're authorized to write insurance in all 67 Florida counties and carry licenses in 45+ states for your convenience.
-                </div>
-            </div>
-            
-            <!-- FAQ 3 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
-                <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-50 transition focus:outline-none">
-                    <span>How much coverage do I need for my home?</span>
-                    <i class="fas fa-chevron-down text-gray-400 transform transition-transform"></i>
-                </button>
-                <div class="faq-content hidden p-5 bg-white text-gray-600 text-sm border-t border-gray-100 leading-relaxed">
-                    Home insurance coverage depends on your home's value, location, and personal assets. Our agents will help you determine the right coverage including dwelling, personal property, liability, and additional living expenses.
-                </div>
-            </div>
-            
-            <!-- FAQ 4 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
-                <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-50 transition focus:outline-none">
-                    <span>Do I need flood insurance in Florida?</span>
-                    <i class="fas fa-chevron-down text-gray-400 transform transition-transform"></i>
-                </button>
-                <div class="faq-content hidden p-5 bg-white text-gray-600 text-sm border-t border-gray-100 leading-relaxed">
-                    Absolutely! Florida is one of the most flood-prone states in the nation. Even if you're not in a high-risk zone, flood damage isn't covered by standard home insurance. We offer affordable NFIP flood insurance through multiple carriers.
-                </div>
-            </div>
-            
-            <!-- FAQ 5 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
-                <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-50 transition focus:outline-none">
-                    <span>Can I bundle my auto and home insurance?</span>
-                    <i class="fas fa-chevron-down text-gray-400 transform transition-transform"></i>
-                </button>
-                <div class="faq-content hidden p-5 bg-white text-gray-600 text-sm border-t border-gray-100 leading-relaxed">
-                    Yes! Bundling your auto and home insurance with us can save you up to 15% on both policies. Plus, you'll have one convenient point of contact for all your insurance needs.
-                </div>
-            </div>
-            
-            <!-- FAQ 6 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
-                <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-50 transition focus:outline-none">
-                    <span>How long does it take to get a quote?</span>
-                    <i class="fas fa-chevron-down text-gray-400 transform transition-transform"></i>
-                </button>
-                <div class="faq-content hidden p-5 bg-white text-gray-600 text-sm border-t border-gray-100 leading-relaxed">
-                    Most quotes take just 5-10 minutes! You can get a quote online, over the phone, or visit one of our 100+ Florida locations. We work with 40+ carriers to find you the best rate.
-                </div>
-            </div>
-        </div>
-        
-        <div class="mt-10 p-6 bg-dark-blue rounded-xl text-white">
-            <p class="font-medium mb-4">Still have questions?</p>
-            <a href="contact.html" class="inline-flex items-center bg-primary-red px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition">
-                Contact Us <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-        </div>
-    </div>
-</section>
-<section>
-    <div id="footer-container"></div>
     </section>
-<script>
-let currentSlide = 0;
-const carousel = document.getElementById('agentCarousel');
-const dotsContainer = document.getElementById('carouselDots');
-const cards = carousel ? carousel.querySelectorAll('div[class*="w-48"]') : [];
-const visibleCards = 2;
-const totalSlides = Math.max(0, cards.length - visibleCards);
 
-function updateCarousel() {
-    if (!carousel) return;
-    const cardWidth = cards[0] ? cards[0].offsetWidth + 16 : 0;
-    carousel.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
-    
-    dotsContainer.innerHTML = '';
-    for (let i = 0; i <= totalSlides; i++) {
-        const dot = document.createElement('div');
-        dot.className = `w-2 h-2 rounded-full cursor-pointer transition ${i === currentSlide ? 'bg-primary-red' : 'bg-gray-300'}`;
-        dot.onclick = () => { currentSlide = i; updateCarousel(); };
-        dotsContainer.appendChild(dot);
-    }
-}
-
-function moveCarousel(direction) {
-    if (totalSlides === 0) return;
-    currentSlide = (currentSlide + direction + totalSlides + 1) % (totalSlides + 1);
-    updateCarousel();
-}
-
-let autoSlide = setInterval(() => moveCarousel(1), 4000);
-
-const carouselSection = document.getElementById('agentCarousel');
-if (carouselSection) {
-    carouselSection.addEventListener('mouseenter', () => clearInterval(autoSlide));
-    carouselSection.addEventListener('mouseleave', () => { autoSlide = setInterval(() => moveCarousel(1), 4000); });
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    updateCarousel();
-});
-
-window.addEventListener('resize', updateCarousel);
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const counters = document.querySelectorAll('.counter');
-    
-    const animateCounter = (counter) => {
-        const target = +counter.getAttribute('data-target');
-        const prefix = counter.getAttribute('data-prefix') || '';
-        const suffix = counter.getAttribute('data-suffix') || '';
-        const duration = 2000;
-        const startTime = performance.now();
-        
-        const updateCount = (currentTime) => {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            const easeOut = 1 - Math.pow(1 - progress, 3);
-            const current = Math.floor(target * easeOut);
+    <!-- Testimonials -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-block border border-red-200 text-primary-red text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 bg-red-50">TESTIMONIALS</span>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 serif">What Our Clients Say</h2>
+                <p class="text-gray-600">Join hundreds of thousands of satisfied Florida customers who trust us with their insurance needs.</p>
+            </div>
             
-            counter.innerText = prefix + current + suffix;
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"FreedmanBrokerInsurance saved me over $600 on my auto and home insurance bundle. The agent was knowledgeable and made the whole process easy. Highly recommend!"</p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <div class="font-bold text-dark-blue">Sarah T.</div>
+                            <div class="text-xs text-gray-500">Naples, FL</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"As a small business owner, finding affordable commercial insurance was challenging. These guys found me comprehensive coverage at a great rate. Bilingual agents were a plus!"</p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <div class="font-bold text-dark-blue">Michael R.</div>
+                            <div class="text-xs text-gray-500">Tampa, FL</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"First-time homebuyer here. The agent walked me through all the coverage options and helped me choose the right policy. Got my flood insurance too in one stop!"</p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <div class="font-bold text-dark-blue">James L.</div>
+                            <div class="text-xs text-gray-500">Orlando, FL</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA with Form -->
+    <section class="bg-[#0d152e] text-white py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="w-full md:w-1/2">
+                    <span class="inline-block border border-gray-600 text-gray-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 bg-white/5">FREE QUOTE</span>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 serif">Ready to Start Saving?</h2>
+                    <p class="text-gray-300 mb-8 text-lg">Get your free insurance quote in under 5 minutes. No pressure, no obligation — just the best rates from Florida's most trusted independent agency.</p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary-red text-xl mr-3"></i>
+                            <span>Compare 40+ top insurance carriers instantly</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary-red text-xl mr-3"></i>
+                            <span>Save up to 25% by bundling policies</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary-red text-xl mr-3"></i>
+                            <span>Bilingual agents available (English/Spanish)</span>
+                        </div>
+                    </div>
+                    
+                    <a href="tel:7865012059" class="bg-primary-red text-white px-8 py-4 rounded font-bold hover:bg-red-800 transition inline-flex items-center justify-center text-lg">
+                        <i class="fas fa-phone-alt mr-3"></i> Call 1-800-FREEDOM
+                    </a>
+                </div>
+                
+                <div class="w-full md:w-5/12">
+                    <div class="bg-white rounded-2xl shadow-2xl p-8 text-gray-800">
+                        <h3 class="text-2xl font-bold mb-6 serif text-dark-blue">Get Your Free Insurance Quote</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-semibold mb-2">Full Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-red focus:ring-2 focus:ring-primary-red/20 outline-none" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-2">Email Address</label>
+                                <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-red focus:ring-2 focus:ring-primary-red/20 outline-none" placeholder="john@example.com">
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-semibold mb-2">Phone</label>
+                                    <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-red focus:ring-2 focus:ring-primary-red/20 outline-none" placeholder="(555) 123-4567">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold mb-2">ZIP Code</label>
+                                    <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-red focus:ring-2 focus:ring-primary-red/20 outline-none" placeholder="33101">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-2">Insurance Type</label>
+                                <select class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-red focus:ring-2 focus:ring-primary-red/20 outline-none bg-white">
+                                    <option>Auto Insurance</option>
+                                    <option>Home Insurance</option>
+                                    <option>Home + Auto Bundle</option>
+                                    <option>Condo Insurance</option>
+                                    <option>Renters Insurance</option>
+                                    <option>Flood Insurance</option>
+                                    <option>Life Insurance</option>
+                                    <option>Business Insurance</option>
+                                    <option>Commercial Insurance</option>
+                                    <option>Premium Financing</option>
+                                    <option>Performance Bonds</option>
+                                    <option>Not Sure - Need Guidance</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-primary-red text-white py-4 rounded font-bold hover:bg-red-800 transition flex items-center justify-center">
+                                Get My Free Quote <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                            <p class="text-xs text-gray-500 text-center">By submitting, you agree to our <a href="#" class="underline">Privacy Policy</a>.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="inline-block border border-red-200 text-primary-red text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 bg-red-50">FAQ</span>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 serif">Frequently Asked Questions</h2>
+                <p class="text-gray-600">Get quick answers to the most common questions about our insurance services.</p>
+            </div>
             
-            if (progress < 1) {
-                requestAnimationFrame(updateCount);
-            } else {
-                counter.innerText = prefix + target + suffix;
-            }
-        };
-        
-        requestAnimationFrame(updateCount);
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                counters.forEach(counter => animateCounter(counter));
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    const statsSection = document.querySelector('.counter').closest('section');
-    if (statsSection) {
-        observer.observe(statsSection);
-    }
-});
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-xl border border-gray-100 overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.fa-chevron-down').classList.toggle('fa-rotate-180');">
+                        <span class="font-bold text-lg serif">What information do I need to get an insurance quote?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-600">
+                        <p>For auto insurance: driver details, vehicle information (VIN, year, make, model), driving history, and current coverage. For home insurance: property details, square footage, construction type, and current coverage. Business insurance requires business info, payroll, revenue, and operations details. Our agents will guide you through the specific information needed based on the coverage you're seeking.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-xl border border-gray-100 overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.fa-chevron-down').classList.toggle('fa-rotate-180');">
+                        <span class="font-bold text-lg serif">Is FreedmanBrokerInsurance licensed in Florida?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-600">
+                        <p>Yes! We are fully licensed to sell insurance in the state of Florida. Our agents are also licensed in 45+ other states, allowing us to serve clients nationwide. We maintain all required licenses and certifications to ensure you receive legitimate, compliant insurance coverage and advice.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-xl border border-gray-100 overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.fa-chevron-down').classList.toggle('fa-rotate-180');">
+                        <span class="font-bold text-lg serif">How much coverage do I need for my home?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-600">
+                        <p>Your home should be insured for its full replacement cost, not market value. We recommend enough dwelling coverage to rebuild your home at current construction costs. Personal property should be 50-70% of dwelling coverage. Liability coverage typically starts at $100,000, but we recommend $300,000-$500,000 for most homeowners. Our agents will help you calculate exact needs based on your home's construction, location, and personal assets.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-xl border border-gray-100 overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.fa-chevron-down').classList.toggle('fa-rotate-180');">
+                        <span class="font-bold text-lg serif">Do I need flood insurance in Florida?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-600">
+                        <p>Standard homeowners insurance does NOT cover flood damage. If you have a mortgage from a federally-backed lender and live in a high-risk flood zone, flood insurance is required. However, Florida's flood risk is high even in moderate-risk zones — 1 in 4 flood claims come from low-to-moderate risk areas. We highly recommend flood insurance for all Florida homeowners, especially given the state's extensive coastline and storm surge risk.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-xl border border-gray-100 overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.fa-chevron-down').classList.toggle('fa-rotate-180');">
+                        <span class="font-bold text-lg serif">Can I bundle my auto and home insurance?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-600">
+                        <p>Absolutely! Bundling your auto and home insurance (or multiple policies) with the same carrier can save you up to 25% on premiums. It also simplifies your billing and gives you a single point of contact. We offer multi-policy discounts and will compare bundled quotes from multiple carriers to find you the maximum savings.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 6 -->
+                <div class="bg-white rounded-xl border border-gray-100 overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.fa-chevron-down').classList.toggle('fa-rotate-180');">
+                        <span class="font-bold text-lg serif">How long does it take to get a quote?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-600">
+                        <p>Most quotes are generated instantly through our online system or during a phone consultation. For more complex commercial or specialty insurance needs, quotes typically take 24-48 hours. You can get started right now by filling out the quote form above or calling us at 1-727-230-1000. No obligation, and we'll never share your information without permission.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <span class="text-gray-600">Still have questions?</span>
+                <a href="contact.html" class="inline-flex items-center bg-primary-red text-white px-8 py-3 rounded font-bold hover:bg-red-800 transition ml-4">
+                    Contact Us <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
-// Mobile Menu Toggle
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-
-if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        const icon = mobileMenuBtn.querySelector('i');
-        if (mobileMenu.classList.contains('hidden')) {
-            icon.className = 'fas fa-bars';
-        } else {
-            icon.className = 'fas fa-times';
-        }
-    });
-}
-
-// Awards Section Animation
-const awardsSection = document.getElementById('awardsSection');
-const awardsGrid = document.getElementById('awardsGrid');
-
-if (awardsSection && awardsGrid) {
-    awardsSection.classList.add('awards-animate');
-    const awardsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const items = awardsGrid.querySelectorAll('div');
-                items.forEach((item, index) => {
-                    item.style.animationDelay = `${index * 0.1}s`;
-                    item.classList.add('slide-in');
-                });
-            }
-        });
-    }, { threshold: 0.2 });
-    awardsObserver.observe(awardsSection);
-}
-    });
-}, { threshold: 0.2 });
-
-const awardsSection = document.querySelector('section:has(> div > div:contains("AWARD WINNING"))');
-if (awardsSection) {
-    awardsSection.classList.add('awards-animate');
-    awardsObserver.observe(awardsSection);
-}
-
-// FAQ Accordion
-document.querySelectorAll('.faq-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const content = btn.nextElementSibling;
-        const icon = btn.querySelector('i');
-        content.classList.toggle('hidden');
-        icon.classList.toggle('text-primary-red');
-        icon.classList.toggle('text-gray-400');
-        icon.classList.toggle('rotate-180');
-    });
-});
-
-
-}
-</script>
-
-
+    <div id="footer-container"></div>
 </body>
-
-
-    </html>
+</html>
